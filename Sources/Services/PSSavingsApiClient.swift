@@ -29,8 +29,8 @@ public class PSSavingsApiClient {
             .then(createPromiseWithArrayResult)
     }
     
-    public func createSavingsAccount(request: PSCreateSavingsAccountRequst) -> Promise<PSSavingsAccount> {
-        let request = createRequest(.createSavingsAccount(request: request))
+    public func createSavingsAccount(userId: String, request: PSCreateSavingsAccountRequst) -> Promise<PSSavingsAccount> {
+        let request = createRequest(.createSavingsAccount(userId: userId, request: request))
         makeRequest(apiRequest: request)
         
         return request

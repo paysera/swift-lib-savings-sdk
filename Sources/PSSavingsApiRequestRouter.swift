@@ -4,7 +4,7 @@ import Alamofire
 public enum PSSavingsApiRequestRouter: URLRequestConvertible {
     
     case getSavingsAccounts(filter: PSSavingsAccountFilter)
-    case createSavingsAccount(request: PSCreateSavingsAccountRequst)
+    case createSavingsAccount(userId: String, request: PSCreateSavingsAccountRequst)
     case setSavingsAccountGoal(accountNumber: String, goal: PSSavingsAccountGoal)
     case deleteSavingsAccountGoal(accountNumber: String)
     case createAutomatedFill(request: PSCreateAutomatedFillRequest)
@@ -23,7 +23,7 @@ public enum PSSavingsApiRequestRouter: URLRequestConvertible {
                 .getAutomatedFills( _):
                     return .get
             
-            case .createSavingsAccount( _),
+            case .createSavingsAccount( _, _),
                  .createAutomatedFill( _):
                 return .post
             
@@ -40,8 +40,8 @@ public enum PSSavingsApiRequestRouter: URLRequestConvertible {
         switch self {
             case .getSavingsAccounts( _):
                 return "savings-accounts"
-            case .createSavingsAccount( _):
-                return "savings-accounts"
+            case .createSavingsAccount(let userId, _):
+                return "users/\(userId)/savings-accounts"
             case .setSavingsAccountGoal(let accountNumber, _):
                 return "savings-accounts/\(accountNumber)/goal"
             case .deleteSavingsAccountGoal(let accountNumber):

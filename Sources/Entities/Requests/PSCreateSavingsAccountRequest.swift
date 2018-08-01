@@ -11,7 +11,6 @@ import ObjectMapper
 
 public class PSCreateSavingsAccountRequst: Mappable {
     public var type: String!
-    public var accountNumber: String!
     
     public init() {}
     
@@ -20,6 +19,5 @@ public class PSCreateSavingsAccountRequst: Mappable {
     
     public func mapping(map: Map) {
         type          <- map["type"]
-        accountNumber <- map["account_number"]
     }
 }

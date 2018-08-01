@@ -14,6 +14,7 @@ public class PSSavingsAccount: Mappable {
     public var type: String!
     public var accountNumber: String!
     public var goal: PSSavingsAccountGoal?
+    public var displayUrl: String?
     
     public init() {}
     
@@ -25,6 +26,7 @@ public class PSSavingsAccount: Mappable {
         type          <- map["type"]
         accountNumber <- map["account_number"]
         goal          <- map["goal"]
+        displayUrl    <- map["display_url"]
     }
 }
 
