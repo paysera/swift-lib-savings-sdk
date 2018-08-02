@@ -37,7 +37,7 @@ public class PSAutomatedFillPeriod: Mappable {
     public var monthDay: String?
     public var weekDay: String?
     
-    init() {}
+    public init() {}
     
     required public init?(map: Map) {
     }
