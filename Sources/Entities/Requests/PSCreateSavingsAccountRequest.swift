@@ -9,8 +9,8 @@
 import Foundation
 import ObjectMapper
 
-public class PSCreateSavingsAccountRequst: Mappable {
-    public var type: String!
+public class PSCreateSavingsAccountRequest: Mappable {
+    public var type: String?
     
     public init() {}
     

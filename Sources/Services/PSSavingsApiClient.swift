@@ -29,7 +29,7 @@ public class PSSavingsApiClient {
             .then(createPromiseWithArrayResult)
     }
     
-    public func createSavingsAccount(userId: String, request: PSCreateSavingsAccountRequst) -> Promise<PSSavingsAccount> {
+    public func createSavingsAccount(userId: String, request: PSCreateSavingsAccountRequest) -> Promise<PSSavingsAccount> {
         let request = createRequest(.createSavingsAccount(userId: userId, request: request))
         makeRequest(apiRequest: request)
         
@@ -39,7 +39,7 @@ public class PSSavingsApiClient {
             .then(createPromise)
     }
     
-    public func setSavingsAccountGoal(accountNumber: String, goal: PSSavingsAccountGoal) -> Promise<PSSavingsAccountGoal> {
+    public func setSavingsAccountGoal(accountNumber: String, goal: PSSetSavingsAccountGoal) -> Promise<PSSavingsAccountGoal> {
         let request = createRequest(.setSavingsAccountGoal(accountNumber: accountNumber, goal: goal))
         makeRequest(apiRequest: request)
         
