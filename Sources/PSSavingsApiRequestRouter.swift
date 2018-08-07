@@ -13,8 +13,7 @@ public enum PSSavingsApiRequestRouter: URLRequestConvertible {
     case cancelAutomatedFill(id: String)
     
     // MARK: - Declarations
-    // TODO: change
-    static var baseURLString = "https://mobile-backend.gimbutas.net/savings/rest/v1"
+    static var baseURLString = "https://savings.paysera.com/savings/rest/v1"
     
     private var method: HTTPMethod {
         switch self {
