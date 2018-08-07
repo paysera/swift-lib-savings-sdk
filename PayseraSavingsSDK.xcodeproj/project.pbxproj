@@ -47,6 +47,7 @@
 		ED75391A206A8ADA004EA953 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B25A53206A315100BE81C5 /* ObjectMapper.framework */; };
 		ED75391B206A8ADA004EA953 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88774BC5205FE5A300AC5048 /* Alamofire.framework */; };
 		ED75391C206A8ADA004EA953 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88774BC6205FE5A300AC5048 /* PromiseKit.framework */; };
+		EDEDA0782119B5CD001D5C9D /* PSSetSavingsAccountGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEDA0772119B5CD001D5C9D /* PSSetSavingsAccountGoal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		ED5B4931210FB4EB00D2F3B0 /* PSSavingsAccountFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSavingsAccountFilter.swift; sourceTree = "<group>"; };
 		ED5B4933210FB61F00D2F3B0 /* PSCreateSavingsAccountRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSCreateSavingsAccountRequest.swift; sourceTree = "<group>"; };
 		ED5B4935210FB66300D2F3B0 /* PSCreateAutomatedFillRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSCreateAutomatedFillRequest.swift; sourceTree = "<group>"; };
+		EDEDA0772119B5CD001D5C9D /* PSSetSavingsAccountGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSetSavingsAccountGoal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 			children = (
 				ED5B4933210FB61F00D2F3B0 /* PSCreateSavingsAccountRequest.swift */,
 				ED5B4935210FB66300D2F3B0 /* PSCreateAutomatedFillRequest.swift */,
+				EDEDA0772119B5CD001D5C9D /* PSSetSavingsAccountGoal.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				88B25A49206A23EB00BE81C5 /* PSSavingsApiCredentials.swift in Sources */,
 				88B25A4A206A23EB00BE81C5 /* PSSavingsApiClient.swift in Sources */,
 				ED5B492E210FB3D100D2F3B0 /* PSAutomatedFillsFilter.swift in Sources */,
+				EDEDA0782119B5CD001D5C9D /* PSSetSavingsAccountGoal.swift in Sources */,
 				88B25A51206A302800BE81C5 /* PSSavingsApiRequest.swift in Sources */,
 				88B25A4B206A23EB00BE81C5 /* AuthenticationRequestAdapter.swift in Sources */,
 				880FCB9C206CEB0400350F98 /* PSSavingsApiError.swift in Sources */,

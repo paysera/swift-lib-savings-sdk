@@ -41,6 +41,6 @@ public class PSSavingsAccountGoal: Mappable {
     
     public func mapping(map: Map) {
         amount    <- map["amount"]
-        dateUntil <- map["date_until"]
+        dateUntil <- (map["date_until"], DateTransform())
     }
 }
