@@ -46,7 +46,7 @@ public enum PSSavingsApiRequestRouter: URLRequestConvertible {
             case .deleteSavingsAccountGoal(let accountNumber):
                 return "savings-accounts/\(accountNumber)/goal"
             case .createAutomatedFill(let request):
-                return "savings-account/\(String(describing: request.toAccount))/automated-fills"
+                return "savings-accounts/\(request.toAccount!)/automated-fills"
             case .getAutomatedFills( _):
                 return "automated-fills"
             case .getAutomatedFill(let id):
