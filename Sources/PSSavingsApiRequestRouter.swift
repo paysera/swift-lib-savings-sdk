@@ -58,7 +58,10 @@ public enum PSSavingsApiRequestRouter: URLRequestConvertible {
     
     private var parameters: Parameters? {
         switch self {
-            
+            case .setSavingsAccountGoal( _, let request):
+                return request.toJSON()
+            case .createAutomatedFill(let request):
+                return request.toJSON()
             default:
                 return nil
         }
