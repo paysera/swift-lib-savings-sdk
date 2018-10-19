@@ -118,7 +118,7 @@ public class PSSavingsApiClient {
                         }
                         
                         if statusCode >= 200 && statusCode < 300 {
-                            apiRequest.pendingPromise.resolver.fulfill(responseData as! [String: Any])
+                            apiRequest.pendingPromise.resolver.fulfill(responseData)
                         } else {
                             let error = self.mapError(body: responseData)
                             if statusCode == 401 {
