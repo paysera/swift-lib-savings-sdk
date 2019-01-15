@@ -19,14 +19,14 @@ public class PSSavingsApiClient {
         self.credentials = credentials
     }
     
-    public func getSavingsAccounts(filter: PSSavingsAccountFilter) -> Promise<[PSSavingsAccount]> {
+    public func getSavingsAccounts(filter: PSSavingsAccountFilter) -> Promise<PSMetadataAwareResponse<PSSavingsAccount>> {
         let request = createRequest(.getSavingsAccounts(filter: filter))
         makeRequest(apiRequest: request)
         
         return request
             .pendingPromise
             .promise
-            .then(createPromiseWithArrayResult)
+            .then(createPromise)
     }
     
     public func createSavingsAccount(userId: String, request: PSCreateSavingsAccountRequest) -> Promise<PSSavingsAccount> {
@@ -69,14 +69,14 @@ public class PSSavingsApiClient {
             .then(createPromise)
     }
     
-    public func getAutomatedFills(filter: PSAutomatedFillsFilter) -> Promise<[PSAutomatedFill]> {
+    public func getAutomatedFills(filter: PSAutomatedFillsFilter) -> Promise<PSMetadataAwareResponse<PSAutomatedFill>> {
         let request = createRequest(.getAutomatedFills(filter: filter))
         makeRequest(apiRequest: request)
         
         return request
             .pendingPromise
             .promise
-            .then(createPromiseWithArrayResult)
+            .then(createPromise)
     }
     
     public func getAutomatedFill(id: String) -> Promise<PSAutomatedFill> {
@@ -165,13 +165,6 @@ public class PSSavingsApiClient {
             requests.pendingPromise.resolver.reject(error)
         }
         requestsQueue.removeAll()
-    }
-    
-    private func createPromiseWithArrayResult<T: Mappable>(body: Any) -> Promise<[T]> {
-        guard let objects = Mapper<T>().mapArray(JSONObject: body) else {
-            return Promise(error: mapError(body: body))
-        }
-        return Promise.value(objects)
     }
     
     private func createPromise<T: Mappable>(body: Any) -> Promise<T> {

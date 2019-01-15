@@ -10,7 +10,7 @@ public class PSMetadataAwareResponse<T: Mappable>: Mappable {
         switch T.self {
         
         default:
-            return ""
+            return "items"
         }
     }
     

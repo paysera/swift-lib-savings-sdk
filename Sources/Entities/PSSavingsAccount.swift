@@ -10,7 +10,6 @@ import Foundation
 import ObjectMapper
 
 public class PSSavingsAccount: Mappable {
-    public var id: String!
     public var type: String!
     public var accountNumber: String!
     public var goal: PSSavingsAccountGoal?
@@ -22,7 +21,6 @@ public class PSSavingsAccount: Mappable {
     }
     
     public func mapping(map: Map) {
-        id            <- map["id"]
         type          <- map["type"]
         accountNumber <- map["account_number"]
         goal          <- map["goal"]

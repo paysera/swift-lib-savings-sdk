@@ -15,7 +15,7 @@ public class PSAutomatedFill: Mappable {
     public var fromAccount: String!
     public var toAccount: String!
     public var period: PSAutomatedFillPeriod!
-    public var createdBy: Int!
+    public var createdBy: String!
     
     public init() {}
     
