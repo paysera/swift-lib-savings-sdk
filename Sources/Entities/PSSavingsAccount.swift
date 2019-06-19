@@ -8,6 +8,7 @@
 
 import Foundation
 import ObjectMapper
+import PayseraCommonSDK
 
 public class PSSavingsAccount: Mappable {
     public var type: String!

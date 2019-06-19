@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import PayseraCommonSDK
 
 public class PSSetSavingsAccountGoal: Mappable {
     public var amount: PSMoney?

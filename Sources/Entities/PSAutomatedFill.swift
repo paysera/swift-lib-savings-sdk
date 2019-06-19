@@ -8,6 +8,7 @@
 
 import Foundation
 import ObjectMapper
+import PayseraCommonSDK
 
 public class PSAutomatedFill: Mappable {
     public var id: String!

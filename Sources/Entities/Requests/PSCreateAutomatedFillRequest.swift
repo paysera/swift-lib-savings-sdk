@@ -8,6 +8,7 @@
 
 import Foundation
 import ObjectMapper
+import PayseraCommonSDK
 
 public class PSCreateAutomatedFillRequest: Mappable {
     public var amount: PSMoney?
