@@ -191,12 +191,12 @@ public class PSSavingsApiClient {
         return Promise.value(body)
     }
     
-    private func mapError(body: Any?) -> PSSavingsApiError {
-        if let apiError = Mapper<PSSavingsApiError>().map(JSONObject: body) {
+    private func mapError(body: Any?) -> PSApiError {
+        if let apiError = Mapper<PSApiError>().map(JSONObject: body) {
             return apiError
         }
         
-        return PSSavingsApiError.unknown()
+        return PSApiError.unknown()
     }
     
     private func createRequest(_ endpoint: PSSavingsApiRequestRouter) -> PSSavingsApiRequest {

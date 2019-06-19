@@ -22,7 +22,6 @@
 /* Begin PBXBuildFile section */
 		52D6D9871BEFF229002C0205 /* PayseraSavingsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* PayseraSavingsSDK.framework */; };
 		880FCB92206CB29700350F98 /* PayseraSavingsSDK.plist in Resources */ = {isa = PBXBuildFile; fileRef = 880FCB91206CB29700350F98 /* PayseraSavingsSDK.plist */; };
-		880FCB9C206CEB0400350F98 /* PSSavingsApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FCB9B206CEB0400350F98 /* PSSavingsApiError.swift */; };
 		88774BCD205FE5F700AC5048 /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = 88774BCB205FE5F700AC5048 /* Cartfile.resolved */; };
 		88774BCE205FE5F700AC5048 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 88774BCC205FE5F700AC5048 /* Cartfile */; };
 		88B25A48206A23EB00BE81C5 /* PSSavingsApiClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B25A44206A23EB00BE81C5 /* PSSavingsApiClientFactory.swift */; };
@@ -74,7 +73,6 @@
 		52D6D97C1BEFF229002C0205 /* PayseraSavingsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PayseraSavingsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9861BEFF229002C0205 /* PayseraSavingsSDK-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PayseraSavingsSDK-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		880FCB91206CB29700350F98 /* PayseraSavingsSDK.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PayseraSavingsSDK.plist; sourceTree = "<group>"; };
-		880FCB9B206CEB0400350F98 /* PSSavingsApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSavingsApiError.swift; sourceTree = "<group>"; };
 		88774BC5205FE5A300AC5048 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		88774BC6205FE5A300AC5048 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		88774BCB205FE5F700AC5048 /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 				ED5B492A210FB29800D2F3B0 /* Requests */,
 				88B25A45206A23EB00BE81C5 /* PSSavingsApiCredentials.swift */,
 				88B25A4E206A302800BE81C5 /* PSSavingsApiRequest.swift */,
-				880FCB9B206CEB0400350F98 /* PSSavingsApiError.swift */,
 				ED5B492B210FB2A700D2F3B0 /* PSAutomatedFill.swift */,
 				ED5B492D210FB3D100D2F3B0 /* PSAutomatedFillsFilter.swift */,
 				ED5B492F210FB42C00D2F3B0 /* PSSavingsAccount.swift */,
@@ -369,7 +366,6 @@
 				EDEDA0782119B5CD001D5C9D /* PSSetSavingsAccountGoal.swift in Sources */,
 				88B25A51206A302800BE81C5 /* PSSavingsApiRequest.swift in Sources */,
 				88B25A4B206A23EB00BE81C5 /* AuthenticationRequestAdapter.swift in Sources */,
-				880FCB9C206CEB0400350F98 /* PSSavingsApiError.swift in Sources */,
 				ED5B4936210FB66300D2F3B0 /* PSCreateAutomatedFillRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
