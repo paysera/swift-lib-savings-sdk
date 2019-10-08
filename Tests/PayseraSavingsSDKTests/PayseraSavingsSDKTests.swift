@@ -1,11 +1,12 @@
 import Foundation
 import XCTest
 import PayseraSavingsSDK
+import PayseraCommonSDK
 import PromiseKit
 import JWTDecode
 import ObjectMapper
 
-class SavingsSDKTests: XCTestCase {
+class PayseraSavingsSDKTests: XCTestCase {
     private var client: PSSavingsApiClient!
     
     override func setUp() {
@@ -15,12 +16,31 @@ class SavingsSDKTests: XCTestCase {
     }
     
     func createClient() -> PSSavingsApiClient {
-        let credentials = PSSavingsApiCredentials()
+        let credentials = PSApiJWTCredentials()
         
-        let token = "change_me"
+        let token = "insert_me"
         
         credentials.token = try! decode(jwt: token)
         
         return PSSavingsApiClientFactory.createClient(credentials: credentials)
+    }
+    
+    func testGetSavingsAccounts() {
+        let expectation = XCTestExpectation(description: "")
+        
+        let filter = PSSavingsAccountFilter()
+        filter.accountNumbers = ["EVP1910005103180"]
+        
+        self.client
+            .getSavingsAccounts(filter: filter)
+            .done { response in
+                print(response)
+            }.catch { error in
+                print((error as? PSApiError)?.toJSON() ?? "")
+            }.finally {
+                expectation.fulfill()
+            }
+    
+        wait(for: [expectation], timeout: 10.0)
     }
 }

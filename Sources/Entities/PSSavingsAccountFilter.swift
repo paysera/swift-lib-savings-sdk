@@ -1,23 +1,12 @@
-//
-//  PSSavingsAccountFilter.swift
-//  PayseraSavingsSDK
-//
-//  Created by Vytautas Gimbutas on 7/31/18.
-//  Copyright © 2018 Paysera. All rights reserved.
-//
-
 import Foundation
 import ObjectMapper
+import PayseraCommonSDK
 
-public class PSSavingsAccountFilter: Mappable {
+public class PSSavingsAccountFilter: PSBaseFilter {
     public var accountNumbers: [String]!
     
-    public init() {}
-    
-    required public init?(map: Map) {
-    }
-    
-    public func mapping(map: Map) {
+    override open func mapping(map: Map) {
+        super.mapping(map: map)
         accountNumbers <- map["account_numbers"]
     }
 }
