@@ -1,6 +1,7 @@
 import XCTest
-@testable import AccountsSDKTests
 
-XCTMain([
-    testCase(AccountsSDKTests.allTests),
-])
+import PayseraSavingsSDKTests
+
+var tests = [XCTestCaseEntry]()
+tests += PayseraSavingsSDKTests.allTests()
+XCTMain(tests)
