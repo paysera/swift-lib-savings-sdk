@@ -9,13 +9,10 @@ public class PSSavingsApiClientFactory {
         logger: PSLoggerProtocol? = nil
     ) -> PSSavingsApiClient {
         let interceptor = PSRequestAdapter(credentials: credentials)
-        let trustedSession = PSTrustedSession(
-            interceptor: interceptor,
-            hosts: ["savings.paysera.com"]
-        )
+        let session = Session(interceptor: interceptor)
         
         return PSSavingsApiClient(
-            session: trustedSession,
+            session: session,
             credentials: credentials,
             tokenRefresher: tokenRefresher,
             logger: logger
