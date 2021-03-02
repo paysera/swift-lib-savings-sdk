@@ -79,11 +79,8 @@ public enum PSSavingsApiRequestRouter: URLRequestConvertible {
         urlRequest.method = method
         
         switch method {
-        case .get:
-            urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
-        case .post:
-            urlRequest = try JSONEncoding.default.encode(urlRequest, with: parameters)
-        case .put:
+        case .post,
+             .put:
             urlRequest = try JSONEncoding.default.encode(urlRequest, with: parameters)
         default:
             urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
