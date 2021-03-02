@@ -2,7 +2,6 @@ import Alamofire
 import Foundation
 
 public enum PSSavingsApiRequestRouter: URLRequestConvertible {
-    
     case getSavingsAccounts(filter: PSSavingsAccountFilter)
     case createSavingsAccount(userId: String, request: PSCreateSavingsAccountRequest)
     case setSavingsAccountGoal(accountNumber: String, goal: PSSetSavingsAccountGoal)
