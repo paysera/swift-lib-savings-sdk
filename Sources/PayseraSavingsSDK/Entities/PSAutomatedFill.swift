@@ -1,12 +1,3 @@
-//
-//  AutomatedFill.swift
-//  PayseraSavingsSDK
-//
-//  Created by Vytautas Gimbutas on 7/30/18.
-//  Copyright © 2018 Paysera. All rights reserved.
-//
-
-import Foundation
 import ObjectMapper
 import PayseraCommonSDK
 
