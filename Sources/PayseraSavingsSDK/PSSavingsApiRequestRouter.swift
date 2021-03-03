@@ -1,7 +1,7 @@
 import Alamofire
 import Foundation
 
-public enum PSSavingsApiRequestRouter: URLRequestConvertible {
+enum PSSavingsApiRequestRouter {
     case getSavingsAccounts(filter: PSSavingsAccountFilter)
     case createSavingsAccount(userId: String, request: PSCreateSavingsAccountRequest)
     case setSavingsAccountGoal(accountNumber: String, goal: PSSetSavingsAccountGoal)
@@ -12,7 +12,7 @@ public enum PSSavingsApiRequestRouter: URLRequestConvertible {
     case cancelAutomatedFill(id: String)
     
     // MARK: - Declarations
-    static let baseURL = URL(string: "https://savings.paysera.com/savings/rest/v1")!
+    private static let baseURL = URL(string: "https://savings.paysera.com/savings/rest/v1")!
     
     private var method: HTTPMethod {
         switch self {
@@ -71,9 +71,10 @@ public enum PSSavingsApiRequestRouter: URLRequestConvertible {
             return nil
         }
     }
-    
-    // MARK: - Method
-    public func asURLRequest() throws -> URLRequest {
+}
+
+extension PSSavingsApiRequestRouter: URLRequestConvertible {
+    func asURLRequest() throws -> URLRequest {
         let url = Self.baseURL.appendingPathComponent(path)
         var urlRequest = URLRequest(url: url)
         urlRequest.method = method
